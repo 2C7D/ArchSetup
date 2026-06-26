@@ -17,3 +17,8 @@ gestures {
         off
     }
 }
+
+cursor {
+    xcursor-theme "Vimix-cursors"
+    xcursor-size 14
+}
