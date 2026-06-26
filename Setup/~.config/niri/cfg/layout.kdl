@@ -1,0 +1,33 @@
+    layout {
+	border{
+		off
+		
+	}
+	shadow{
+		off
+	}
+	focus-ring{
+		off	
+	
+	}
+	insert-hint{
+		on
+	}
+	
+        gaps 0 // Gap between windows
+        center-focused-column "never" // Don’t auto-center focused column
+	
+        background-color "000000" // <- needed for noctalia-shell to set wallpaper
+	tab-indicator{
+		on
+		corner-radius 0
+	}
+	
+        preset-column-widths {
+            proportion 1.0
+            proportion 0.0
+            proportion 0.0
+        }
+	
+        struts {}
+    }

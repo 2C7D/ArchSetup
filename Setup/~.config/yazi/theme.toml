@@ -1,0 +1,145 @@
+# yazi theme — foot standard
+# palette available: 000000 FFFFFF FF0000 00FF00 0000FF FFFF00 00FFFF FF00FF
+#
+# roles, one color each, no decorative reuse:
+#   white   = structural chrome (borders, titles, separators, plain text)
+#   cyan    = orientation (cwd, current path, info severity)
+#   yellow  = find/match highlight + warning severity (same role as fuzzel/helix — desktop-wide consistency)
+#   magenta = file-type signal: directories
+#   blue    = file-type signal: symlinks/special files
+#   green   = copied state (strict opposite of cut — never reused elsewhere)
+#   red     = cut state + error severity (strict opposite of copied)
+#   black   = surface + every inverted fg for hover/active/selected rows
+#
+# hover/active states use inversion (bg<->fg swap), same move as foot's cursor —
+# no new color spent on "this row has focus", just flip what's already there.
+# marked (multi-select) gets its own visible identity (yellow bg) since it must
+# stay legible at the same time a different row is hovered — these two states
+# coexist on screen simultaneously, unlike helix's diagnostics/syntax timing argument,
+# so marked cannot just borrow hover's color.
+
+[mgr]
+cwd = { fg = "cyan" }
+
+hovered          = { fg = "black", bg = "white" }
+preview_hovered  = { underline = true }
+
+find_keyword  = { fg = "black", bg = "yellow", bold = true }
+find_position = { fg = "yellow" }
+
+marker_copied   = { fg = "green", bg = "green" }
+marker_cut      = { fg = "red", bg = "red" }
+marker_marked   = { fg = "black", bg = "yellow" }
+marker_selected = { fg = "black", bg = "white" }
+
+count_copied   = { fg = "black", bg = "green" }
+count_cut      = { fg = "black", bg = "red" }
+count_selected = { fg = "black", bg = "white" }
+
+border_symbol = "│"
+border_style  = { fg = "white" }
+
+[tabs]
+active   = { fg = "black", bg = "white", bold = true }
+inactive = { fg = "white", bg = "black" }
+
+[mode]
+normal_main = { fg = "black", bg = "white", bold = true }
+normal_alt  = { fg = "white", bg = "black" }
+
+select_main = { fg = "black", bg = "yellow", bold = true }
+select_alt  = { fg = "yellow", bg = "black" }
+
+unset_main = { fg = "black", bg = "magenta", bold = true }
+unset_alt  = { fg = "magenta", bg = "black" }
+
+[status]
+perm_sep   = { fg = "white" }
+perm_type  = { fg = "white" }
+perm_read  = { fg = "green" }
+perm_write = { fg = "red" }
+perm_exec  = { fg = "yellow" }
+
+progress_label  = { fg = "white", bold = true }
+progress_normal = { fg = "black", bg = "cyan" }
+progress_error  = { fg = "black", bg = "red" }
+
+[pick]
+border   = { fg = "white" }
+active   = { fg = "yellow", bold = true }
+inactive = { fg = "white" }
+
+[input]
+border   = { fg = "white" }
+title    = { fg = "white" }
+value    = { fg = "white" }
+selected = { fg = "black", bg = "white" }
+
+[cmp]
+border = { fg = "white" }
+
+[tasks]
+border  = { fg = "white" }
+title   = { fg = "white" }
+hovered = { fg = "black", bg = "white" }
+
+[which]
+mask            = { fg = "white" }
+cand            = { fg = "yellow" }
+rest            = { fg = "white" }
+desc            = { fg = "white" }
+separator       = "  "
+separator_style = { fg = "white" }
+
+[help]
+on      = { fg = "yellow" }
+run     = { fg = "white" }
+hovered = { fg = "black", bg = "white" }
+footer  = { fg = "black", bg = "white" }
+
+[spot]
+border   = { fg = "white" }
+title    = { fg = "white" }
+tbl_col  = { fg = "white" }
+tbl_cell = { fg = "black", bg = "white" }
+
+[notify]
+title_info  = { fg = "cyan" }
+title_warn  = { fg = "yellow" }
+title_error = { fg = "red" }
+
+[filetype]
+rules = [
+	{ url = "*/", fg = "magenta", bold = true },
+	{ mime = "image/*", fg = "blue" },
+	{ mime = "{audio,video}/*", fg = "blue" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "blue" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "blue" },
+	{ url = "*", fg = "white" },
+]
+
+[icon]
+conds = [
+	{ if = "orphan", text = "", fg = "red" },
+	{ if = "link", text = "", fg = "blue" },
+	{ if = "block", text = "", fg = "blue" },
+	{ if = "char", text = "", fg = "blue" },
+	{ if = "fifo", text = "", fg = "blue" },
+	{ if = "sock", text = "", fg = "blue" },
+	{ if = "sticky", text = "", fg = "yellow" },
+	{ if = "dummy", text = "", fg = "red" },
+	{ if = "dir & hovered", text = "", fg = "black" },
+	{ if = "dir", text = "", fg = "magenta" },
+	{ if = "exec", text = "", fg = "green" },
+	{ if = "!dir", text = "", fg = "white" },
+]
+
+[palette]
+black   = "#000000"
+white   = "#ffffff"
+red     = "#ff0000"
+green   = "#00ff00"
+blue    = "#0000ff"
+yellow  = "#ffff00"
+cyan    = "#00ffff"
+magenta = "#ff00ff"

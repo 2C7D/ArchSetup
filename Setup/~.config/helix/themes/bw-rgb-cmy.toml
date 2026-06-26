@@ -1,0 +1,121 @@
+# helix theme — foot standard
+# palette available: 000000 FFFFFF FF0000 00FF00 0000FF FFFF00 00FFFF FF00FF
+# structure=white, type=green, function=cyan, variable=blue, literal=yellow,
+# comment=magenta(+italic), diagnostics/diff=red/blue/green, surface=black
+#
+# honest disclosure, not swept under the rug: green and blue each carry two
+# roles (green=type + diff.plus, blue=variable + diagnostic.info/diff.delta).
+# this is a real rule-1 bend, not a clean 1-color-1-role file. justified only
+# because the two uses never render on the same glyph at the same time —
+# diff/diagnostic colors live in the gutter or a hover popup, never painted
+# over a token that's simultaneously showing its syntax color. if that ever
+# stops being true (e.g. inline diagnostic text coloring), this needs a redo.
+#
+# comments can't be dimmed without gray, so italic does the demotion work instead
+# selection/cursor solved by inversion, same move as foot's cursor and fuzzel's selection
+
+"attribute" = "white"
+"keyword" = "white"
+"keyword.directive" = "white"
+"namespace" = "green"
+"punctuation" = "white"
+"punctuation.delimiter" = "white"
+"operator" = "white"
+
+"special" = "yellow"
+"variable" = "blue"
+"variable.other.member" = "blue"
+"variable.parameter" = "blue"
+"variable.builtin" = "blue"
+
+"type" = "green"
+"type.builtin" = "green"
+"constructor" = "green"
+"function" = "cyan"
+"function.macro" = "cyan"
+"function.builtin" = "cyan"
+"tag" = "green"
+
+"comment" = { fg = "magenta", modifiers = ["italic"] }
+
+"constant" = "yellow"
+"constant.builtin" = "yellow"
+"string" = "yellow"
+"constant.numeric" = "yellow"
+"constant.character.escape" = "yellow"
+"label" = "yellow"
+
+"markup.heading" = { fg = "white", modifiers = ["bold"] }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "yellow", modifiers = ["underlined"] }
+"markup.link.text" = "cyan"
+"markup.raw" = "yellow"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "blue"
+
+"ui.background" = { bg = "black" }
+"ui.background.separator" = { fg = "white" }
+"ui.linenr" = { fg = "white" }
+"ui.linenr.selected" = { fg = "yellow" }
+"ui.statusline" = { fg = "black", bg = "white" }
+"ui.statusline.inactive" = { fg = "white", bg = "black" }
+"ui.popup" = { bg = "black" }
+"ui.window" = { fg = "white" }
+"ui.help" = { bg = "white", fg = "black" }
+"ui.text" = { fg = "white" }
+"ui.text.focus" = { fg = "white" }
+"ui.text.inactive" = { fg = "white" }
+"ui.text.directory" = { fg = "cyan" }
+
+"ui.virtual" = { fg = "white" }
+"ui.virtual.ruler" = { bg = "black" }
+"ui.virtual.jump-label" = { fg = "yellow", modifiers = ["bold"] }
+"ui.virtual.indent-guide" = { fg = "white" }
+
+# inversion, not a new color — same move as the cursor in foot
+"ui.selection" = { bg = "white", fg = "black" }
+"ui.selection.primary" = { bg = "white", fg = "black" }
+"ui.cursor.select" = { bg = "yellow", fg = "black" }
+"ui.cursor.insert" = { bg = "white", fg = "black" }
+"ui.cursor.primary.select" = { bg = "yellow", fg = "black" }
+"ui.cursor.primary.insert" = { bg = "white", fg = "black" }
+"ui.cursor.match" = { fg = "black", bg = "cyan" }
+"ui.cursor" = { modifiers = ["reversed"] }
+
+"ui.cursorline.primary" = { bg = "black" }
+"ui.highlight" = { bg = "white", fg = "black" }
+"ui.highlight.frameline" = { bg = "red", fg = "white" }
+
+"ui.debug" = { fg = "magenta" }
+"ui.debug.breakpoint" = { fg = "red" }
+
+"ui.menu" = { fg = "white", bg = "black" }
+"ui.menu.selected" = { fg = "black", bg = "white" }
+"ui.menu.scroll" = { fg = "white", bg = "black" }
+
+# traffic-light triad — the one place severity earns distinct pure hues
+"diagnostic.hint" = { underline = { color = "cyan", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+warning = "yellow"
+error = "red"
+info = "blue"
+hint = "cyan"
+
+[palette]
+black = "#000000"
+white = "#ffffff"
+red = "#ff0000"
+green = "#00ff00"
+blue = "#0000ff"
+yellow = "#ffff00"
+cyan = "#00ffff"
+magenta = "#ff00ff"

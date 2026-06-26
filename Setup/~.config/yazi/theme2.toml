@@ -1,0 +1,150 @@
+# ================================================================
+#  Yazi Theme — Cyan Main Text / Yellow Accent (Strict 6 Colors)
+# ================================================================
+#  Main: #00FFFF (Cyan)  |  Accent/Highlight: #FFFF00 (Yellow)
+#  Deco: #FF00FF (Magenta) | Errors: #FF0000 | Success: #00FF00
+# ================================================================
+
+[app]
+overall = { bg = "#000000" }
+
+# ---------- Manager (File List) ----------
+[mgr]
+cwd = { fg = "#00FFFF" }   # Current directory = Cyan
+
+find_keyword  = { fg = "#FFFF00", bold = true, italic = true, underline = true }  # Yellow for search
+find_position = { fg = "#FF00FF", bold = true, italic = true }
+
+marker_copied   = { fg = "#00FF00", bg = "#00FF00" }
+marker_cut      = { fg = "#FF0000", bg = "#FF0000" }
+marker_marked   = { fg = "#FFFF00", bg = "#FFFF00" }   # Yellow marker
+marker_selected = { fg = "#00FFFF", bg = "#00FFFF" }   # Cyan marker
+
+count_copied   = { fg = "#000000", bg = "#00FF00" }
+count_cut      = { fg = "#000000", bg = "#FF0000" }
+count_selected = { fg = "#000000", bg = "#FFFF00" }    # Black on Yellow
+
+border_symbol = "│"
+border_style  = { fg = "#FF00FF" }   # Magenta
+
+# ---------- Tabs ----------
+[tabs]
+active   = { fg = "#000000", bg = "#FFFF00", bold = true }   # Black on Yellow (active)
+inactive = { fg = "#00FFFF", bg = "#000000" }                # Cyan on Black
+
+# ---------- Mode (Cursor & Selection) ----------
+[mode]
+normal_main = { fg = "#000000", bg = "#FFFF00", bold = true }   # Black on Yellow (hover)
+normal_alt  = { fg = "#00FFFF", bg = "#000000" }                # Cyan on Black
+
+select_main = { fg = "#000000", bg = "#00FFFF", bold = true }   # Black on Cyan (selection)
+select_alt  = { fg = "#FFFF00", bg = "#000000" }                # Yellow on Black
+
+unset_main = { fg = "#000000", bg = "#FF00FF", bold = true }
+unset_alt  = { fg = "#FF00FF", bg = "#000000" }
+
+# ---------- Status Bar ----------
+[status]
+perm_sep   = { fg = "#00FFFF" }
+perm_type  = { fg = "#FF00FF" }
+perm_read  = { fg = "#00FF00" }
+perm_write = { fg = "#FF0000" }
+perm_exec  = { fg = "#FFFF00" }
+
+progress_label  = { fg = "#00FFFF", bold = true }          # Cyan
+progress_normal = { fg = "#000000", bg = "#00FF00" }
+progress_error  = { fg = "#000000", bg = "#FF0000" }
+
+# ---------- Pick / Input / Completion ----------
+[pick]
+border   = { fg = "#FF00FF" }
+active   = { fg = "#FFFF00", bold = true }   # Yellow for active pick
+inactive = { fg = "#00FFFF" }                # Cyan for inactive
+
+[input]
+border   = { fg = "#FF00FF" }
+title    = { fg = "#00FFFF" }
+value    = { fg = "#00FFFF", bg = "#000000" }
+selected = { fg = "#000000", bg = "#FFFF00" }   # Black on Yellow
+
+[cmp]
+border = { fg = "#FF00FF" }
+
+# ---------- Tasks ----------
+[tasks]
+border  = { fg = "#FF00FF" }
+title   = { fg = "#00FFFF" }
+hovered = { fg = "#000000", bg = "#FFFF00" }   # Black on Yellow
+
+# ---------- Which / Help ----------
+[which]
+mask            = { fg = "#FF00FF" }
+cand            = { fg = "#FFFF00" }   # Yellow for candidates
+rest            = { fg = "#00FFFF" }   # Cyan for rest
+desc            = { fg = "#FF00FF" }
+separator       = "  "
+separator_style = { fg = "#FF00FF" }
+
+[help]
+on      = { fg = "#00FF00" }
+run     = { fg = "#FFFF00" }   # Yellow for runnable commands
+hovered = { fg = "#000000", bg = "#00FFFF" }   # Black on Cyan
+footer  = { fg = "#000000", bg = "#FFFF00" }   # Black on Yellow
+
+# ---------- Spotter / Notifications ----------
+[spot]
+border   = { fg = "#FF00FF" }
+title    = { fg = "#00FFFF" }
+tbl_col  = { fg = "#FFFF00" }
+tbl_cell = { fg = "#000000", bg = "#00FFFF" }
+
+[notify]
+title_info  = { fg = "#00FFFF" }   # Cyan info
+title_warn  = { fg = "#FFFF00" }   # Yellow warnings
+title_error = { fg = "#FF0000" }
+
+# ---------- Filetype Rules ----------
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#FF00FF" },
+	{ mime = "{audio,video}/*", fg = "#FFFF00" },   # Yellow for media
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#FF00FF" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#00FF00" },
+	{ mime = "vfs/{absent,stale}", fg = "#FF00FF" },
+	{ url = "*", fg = "#00FFFF" },    # ALL files = CYAN (main text)
+	{ url = "*/", fg = "#00FFFF", style = { bold = true } },   # DIRS = CYAN + BOLD
+]
+
+# ---------- Icons ----------
+[icon]
+dirs = [
+	{ name = ".config", text = "", fg = "#FF00FF" },
+	{ name = ".git", text = "", fg = "#FFFF00" },
+	{ name = ".github", text = "", fg = "#FF00FF" },
+	{ name = ".npm", text = "", fg = "#FF00FF" },
+	{ name = "Desktop", text = "", fg = "#FFFF00" },
+	{ name = "Development", text = "", fg = "#FFFF00" },
+	{ name = "Documents", text = "", fg = "#00FFFF" },
+	{ name = "Downloads", text = "", fg = "#00FFFF" },
+	{ name = "Library", text = "", fg = "#FFFF00" },
+	{ name = "Movies", text = "", fg = "#FF00FF" },
+	{ name = "Music", text = "", fg = "#FF00FF" },
+	{ name = "Pictures", text = "", fg = "#FF00FF" },
+	{ name = "Public", text = "", fg = "#FFFF00" },
+	{ name = "Videos", text = "", fg = "#FF00FF" },
+]
+
+conds = [
+	{ if = "orphan", text = "", fg = "#FF0000" },
+	{ if = "link", text = "", fg = "#FFFF00" },   # Yellow for symlinks
+	{ if = "block", text = "", fg = "#FF00FF" },
+	{ if = "char", text = "", fg = "#FF00FF" },
+	{ if = "fifo", text = "", fg = "#FF00FF" },
+	{ if = "sock", text = "", fg = "#FF00FF" },
+	{ if = "sticky", text = "", fg = "#FFFF00" },
+	{ if = "dummy", text = "", fg = "#FF0000" },
+	{ if = "dir & hovered", text = "", fg = "#FFFF00" },   # Yellow on hover
+	{ if = "dir", text = "", fg = "#00FFFF" },             # Cyan dirs
+	{ if = "exec", text = "", fg = "#00FF00" },
+	{ if = "!dir", text = "", fg = "#00FFFF" },            # Cyan files
+]

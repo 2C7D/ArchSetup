@@ -1,0 +1,167 @@
+# ~/.config/helix/themes/ngnl.toml
+
+# Palette
+"ui.background" = { bg = "bg0" }
+"ui.background.separator" = { fg = "bg4" }
+"ui.window" = { fg = "bg4" }
+"ui.gutter" = { bg = "bg0" }
+"ui.gutter.selected" = { bg = "bg1" }
+
+"ui.text" = { fg = "fg0" }
+"ui.text.focus" = { fg = "fg0" }
+"ui.text.inactive" = { fg = "grey0" }
+
+"ui.cursor" = { fg = "bg0", bg = "orange" }
+"ui.cursor.primary" = { fg = "bg0", bg = "pink" }
+"ui.cursor.match" = { fg = "bg0", bg = "purple" }
+
+"ui.selection" = { bg = "bg_visual" }
+"ui.selection.primary" = { bg = "bg_visual" }
+
+"ui.linenr" = { fg = "grey0" }
+"ui.linenr.selected" = { fg = "orange" }
+
+"ui.statusline" = { fg = "fg0", bg = "bg1" }
+"ui.statusline.inactive" = { fg = "grey0", bg = "bg0" }
+"ui.statusline.normal" = { fg = "bg0", bg = "orange" }
+"ui.statusline.insert" = { fg = "bg0", bg = "pink" }
+"ui.statusline.select" = { fg = "bg0", bg = "purple" }
+
+"ui.popup" = { fg = "fg0", bg = "bg1" }
+"ui.popup.info" = { fg = "fg0", bg = "bg1" }
+"ui.menu" = { fg = "fg0", bg = "bg1" }
+"ui.menu.selected" = { fg = "bg0", bg = "orange" }
+"ui.menu.scroll" = { fg = "grey0", bg = "bg1" }
+
+"ui.help" = { fg = "fg0", bg = "bg1" }
+
+"ui.highlight" = { bg = "bg_current_word" }
+"ui.highlight.frameline" = { bg = "bg1" }
+
+"ui.cursorline.primary" = { bg = "bg1" }
+"ui.cursorline.secondary" = { bg = "bg0" }
+
+"ui.virtual.ruler" = { bg = "bg1" }
+"ui.virtual.whitespace" = { fg = "bg4" }
+"ui.virtual.indent-guide" = { fg = "bg4" }
+"ui.virtual.inlay-hint" = { fg = "grey0", bg = "bg0" }
+"ui.virtual.jump-label" = { fg = "orange", modifiers = ["bold"] }
+
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "aqua", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+"error" = { fg = "red" }
+"warning" = { fg = "orange" }
+"info" = { fg = "blue" }
+"hint" = { fg = "aqua" }
+
+"keyword" = { fg = "pink" }
+"keyword.control" = { fg = "pink" }
+"keyword.control.conditional" = { fg = "pink" }
+"keyword.control.repeat" = { fg = "pink" }
+"keyword.control.import" = { fg = "aqua" }
+"keyword.control.return" = { fg = "pink" }
+"keyword.control.exception" = { fg = "pink" }
+"keyword.operator" = { fg = "orange" }
+"keyword.directive" = { fg = "aqua" }
+"keyword.function" = { fg = "pink" }
+"keyword.storage" = { fg = "orange" }
+"keyword.storage.type" = { fg = "orange" }
+"keyword.storage.modifier" = { fg = "orange" }
+
+"operator" = { fg = "orange" }
+"punctuation" = { fg = "fg0" }
+"punctuation.bracket" = { fg = "fg0" }
+"punctuation.delimiter" = { fg = "fg0" }
+"special" = { fg = "purple" }
+
+"variable" = { fg = "fg0" }
+"variable.builtin" = { fg = "orange" }
+"variable.parameter" = { fg = "subtext" }
+"variable.other.member" = { fg = "fg0" }
+
+"type" = { fg = "yellow" }
+"type.builtin" = { fg = "yellow" }
+"type.parameter" = { fg = "yellow" }
+"type.enum.variant" = { fg = "orange" }
+
+"constructor" = { fg = "yellow" }
+
+"function" = { fg = "purple" }
+"function.builtin" = { fg = "orange" }
+"function.method" = { fg = "purple" }
+"function.macro" = { fg = "aqua" }
+"function.special" = { fg = "aqua" }
+
+"namespace" = { fg = "aqua" }
+"module" = { fg = "aqua" }
+
+"tag" = { fg = "orange" }
+"attribute" = { fg = "aqua" }
+
+"string" = { fg = "green" }
+"string.regexp" = { fg = "aqua" }
+"string.special" = { fg = "aqua" }
+"string.special.url" = { fg = "aqua", modifiers = ["underlined"] }
+"string.special.symbol" = { fg = "aqua" }
+
+"constant" = { fg = "purple" }
+"constant.builtin" = { fg = "orange" }
+"constant.builtin.boolean" = { fg = "orange" }
+"constant.character" = { fg = "green" }
+"constant.character.escape" = { fg = "orange" }
+"constant.numeric" = { fg = "purple" }
+"constant.numeric.integer" = { fg = "purple" }
+"constant.numeric.float" = { fg = "purple" }
+
+"comment" = { fg = "grey0", modifiers = ["italic"] }
+"comment.line" = { fg = "grey0", modifiers = ["italic"] }
+"comment.block" = { fg = "grey0", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "grey0", modifiers = ["italic"] }
+
+"markup.heading" = { fg = "orange", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "orange", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "pink", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "purple", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "aqua", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "fg0", modifiers = ["bold"] }
+"markup.list" = { fg = "pink" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "aqua", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "green" }
+"markup.raw" = { fg = "green" }
+"markup.quote" = { fg = "grey0", modifiers = ["italic"] }
+
+"diff.plus" = { fg = "green" }
+"diff.minus" = { fg = "red" }
+"diff.delta" = { fg = "orange" }
+"diff.delta.moved" = { fg = "purple" }
+
+[palette]
+bg0 = "#0d0515"
+bg1 = "#1a0a2e"
+bg2 = "#1a0a2e"
+bg3 = "#2d1b4e"
+bg4 = "#2d1b4e"
+bg_visual = "#2d1b4e"
+bg_current_word = "#1a0a2e"
+
+fg0 = "#ffb3d1"
+subtext = "#b366ff"
+grey0 = "#6b3d8a"
+
+orange = "#ff4500"
+pink = "#ff0066"
+purple = "#cc00ff"
+yellow = "#ff8c00"
+green = "#00ffaa"
+aqua = "#00d4ff"
+red = "#ff2d78"
+blue = "#7b5ea7"
